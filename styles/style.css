@@ -10,6 +10,20 @@ body {
     text-align: center;
 }
 
+.container div span {
+    position: absolute;
+    left: 3vw;
+    top: 3vh;
+    font-size: 20px;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+}
+
+
+h1 {
+    margin: 50px;
+}
+
 button {
     padding: 10px 20px;
     font-size: 4vh;
@@ -19,13 +33,14 @@ button {
     cursor: pointer;
     color: lightgrey;
     background-color: #000;
+    margin: 15px;
     transition: .5s;
     z-index: 5;
 }
 
 button:hover {
     color: #000;
-    background-color: lightgrey;
+    background-color: white;
 }
 
 .container {
@@ -47,8 +62,9 @@ button:hover {
 }
 
 .slogan p {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 29vh;
+    font-family: monospace;
 }
 
 .gallows {
@@ -91,4 +107,14 @@ button:hover {
 
 .off {
     display: none;
+}
+
+.off-green {
+    color: green;
+    pointer-events: none;
+}
+
+.off-red {
+    color: red;
+    pointer-events: none;
 }
