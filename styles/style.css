@@ -118,3 +118,23 @@ button:hover {
     color: red;
     pointer-events: none;
 }
+
+@media (max-width: 1024px) {
+    .container div span {
+        font-size: 10px;
+
+    }
+
+    .slogan p {
+        font-size: 4vw;
+
+
+    }
+
+    .letter-container {
+        font-size: 3vh;
+        height: 7%;
+        line-height: 4.3vh;
+    }
+
+}
