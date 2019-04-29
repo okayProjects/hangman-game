@@ -55,7 +55,6 @@ const drawnSlogan = () => {
     const index = Math.floor(Math.random() * category.length);
     slogan = category[index].toUpperCase();
     proverbs.splice(index, 1);
-    console.log(slogan);
 }
 
 const transformToDashedSlogan = () => {
@@ -123,7 +122,7 @@ const disableButtons = () => {
 }
 
 const playAgain = () => {
-    categoryReminder.textContent = 'ZAGRAJ PONOWNIE';
+    categoryReminder.textContent = 'PLAY AGAIN';
     categoryReminder.addEventListener('click', () => location.reload());
     categoryReminder.onmouseover = categoryReminder.style.cursor = 'pointer';
 }
@@ -153,7 +152,7 @@ const startGame = () => {
     btnTitles.classList.add('off');
     btnMusic.classList.add('off');
     document.querySelector('.container').classList.remove('off');
-    document.createElement('div').textContent = `Kategoria ${this}`;
+    document.createElement('div').textContent = `Category: ${this}`;
     drawnSlogan();
     transformToDashedSlogan();
     displayDashedSlogan();
@@ -164,32 +163,32 @@ const startGame = () => {
 
 btnProverbs.addEventListener('click', function () {
     category = proverbs;
-    categoryReminder.textContent = `Wybrałeś kategorię: '${this.textContent}'.`;
+    categoryReminder.textContent = `You've chosen category: '${this.textContent}'.`;
     document.querySelector('.container div').appendChild(categoryReminder);
     startGame();
 });
 btnTitles.addEventListener('click', function () {
     category = titles;
     startGame();
-    categoryReminder.textContent = `Wybrałeś kategorię: '${this.textContent}'.`;
+    categoryReminder.textContent = `You've chosen category: '${this.textContent}'.`;
     document.querySelector('.container div').appendChild(categoryReminder);
 });
 btnPeople.addEventListener('click', function () {
     console.log(this);
     category = people;
     startGame();
-    categoryReminder.textContent = `Wybrałeś kategorię: '${this.textContent}'.`;
+    categoryReminder.textContent = `You've chosen category: '${this.textContent}'.`;
     document.querySelector('.container div').appendChild(categoryReminder);
 });
 btnDevices.addEventListener('click', function () {
     category = devices;
     startGame();
-    categoryReminder.textContent = `Wybrałeś kategorię: '${this.textContent}'.`;
+    categoryReminder.textContent = `You've chosen category: '${this.textContent}'.`;
     document.querySelector('.container div').appendChild(categoryReminder);
 });
 btnMusic.addEventListener('click', function () {
     category = music;
     startGame();
-    categoryReminder.textContent = `Wybrałeś kategorię: '${this.textContent}'.`;
+    categoryReminder.textContent = `You've chosen category: '${this.textContent}'.`;
     document.querySelector('.container div').appendChild(categoryReminder);
 });

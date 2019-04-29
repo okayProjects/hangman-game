@@ -8,6 +8,45 @@ body {
     background-color: #000000;
     color: lightgrey;
     text-align: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.button-wrapper {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-wrapper button {
+    width: 20%;
+    flex-basis: 20%;
+    padding: 10px 0;
+    font-size: 20px;
+    margin-top: 3%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+    color: lightgrey;
+    background-color: #000;
+    transition: .5s;
+    z-index: 5;
+}
+
+.button-wrapper h1 {
+    text-transform: capitalize;
+}
+
+.button-wrapper button:hover {
+    color: #000;
+    background-color: white;
 }
 
 .container div span {
@@ -20,28 +59,6 @@ body {
 }
 
 
-h1 {
-    margin: 50px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 4vh;
-    margin-top: 5%;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    cursor: pointer;
-    color: lightgrey;
-    background-color: #000;
-    margin: 15px;
-    transition: .5s;
-    z-index: 5;
-}
-
-button:hover {
-    color: #000;
-    background-color: white;
-}
 
 .container {
     display: flex;
@@ -120,15 +137,24 @@ button:hover {
 }
 
 @media (max-width: 1024px) {
+    .button-wrapper h1 {
+        font-size: 20px;
+    }
+
+    .button-wrapper button {
+        flex-basis: 100%;
+        width:50%;
+        margin: 5%;
+        font-size: 20px;
+        padding: 10px;
+    }
+
     .container div span {
         font-size: 10px;
-
     }
 
     .slogan p {
         font-size: 4vw;
-
-
     }
 
     .letter-container {
